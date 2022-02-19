@@ -2497,20 +2497,20 @@ static int lfs_file_rawopencfg(lfs_t *lfs, lfs_file_t *file,
     lfs_stag_t tag;
     // special case for root
     if (path == NULL || *path == '\0' || strcmp(path, "/") == 0) {
+        tag = 0x3ff;
+        file->type = LFS_TYPE_DIR;
         err = lfs_dir_fetch(lfs, &file->m, lfs->root);
         if (err) {
             goto cleanup;
         }
-        tag = 0x3ff;
-        file->type = LFS_TYPE_DIR;
     } else {
         // allocate entry for file if it doesn't exist
         tag = lfs_dir_find(lfs, &file->m, &path, &file->id);
+        file->type = (tag == LFS_ERR_NOENT) ? LFS_TYPE_REG : lfs_tag_type3(tag);
         if (tag < 0 && !(tag == LFS_ERR_NOENT && file->id != 0x3ff)) {
             err = tag;
             goto cleanup;
         }
-        file->type = (tag == LFS_ERR_NOENT) ? LFS_TYPE_REG : lfs_tag_type3(tag);
     }
 
     // get id, add to list of mdirs to catch update changes
