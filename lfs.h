@@ -484,7 +484,7 @@ int lfs_statcfg(lfs_t *lfs, const char *path, struct lfs_info *info,
 //
 // Fills out the info structure, based on the specified file or directory.
 // Returns a negative error code on failure.
-inline int lfs_stat(lfs_t *lfs, const char *path, struct lfs_info *info) {
+static inline int lfs_stat(lfs_t *lfs, const char *path, struct lfs_info *info) {
     return lfs_statcfg(lfs, path, info, NULL);
 }
 
@@ -671,7 +671,7 @@ int lfs_dir_readcfg(lfs_t *lfs, lfs_dir_t *dir, struct lfs_info *info,
 // Fills out the info structure, based on the specified file or directory.
 // Returns a positive value on success, 0 at the end of directory,
 // or a negative error code on failure.
-inline int lfs_dir_read(lfs_t *lfs, lfs_dir_t *dir, struct lfs_info *info) {
+static inline int lfs_dir_read(lfs_t *lfs, lfs_dir_t *dir, struct lfs_info *info) {
     return lfs_dir_readcfg(lfs, dir, info, NULL);
 }
 
