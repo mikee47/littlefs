@@ -7,15 +7,11 @@
  */
 #include "lfs_util.h"
 
-// Only compile if user does not provide custom config
-#ifndef LFS_CONFIG
-
-
 // If user provides their own CRC impl we don't need this
 #ifndef LFS_CRC
 // Software CRC implementation with small lookup table
 uint32_t lfs_crc(uint32_t crc, const void *buffer, size_t size) {
-    static const uint32_t rtable[16] = {
+    static const uint32_t rtable[16] PROGMEM = {
         0x00000000, 0x1db71064, 0x3b6e20c8, 0x26d930ac,
         0x76dc4190, 0x6b6b51f4, 0x4db26158, 0x5005713c,
         0xedb88320, 0xf00f9344, 0xd6d6a3e8, 0xcb61b38c,
@@ -31,7 +27,4 @@ uint32_t lfs_crc(uint32_t crc, const void *buffer, size_t size) {
 
     return crc;
 }
-#endif
-
-
 #endif
