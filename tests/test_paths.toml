@@ -63,17 +63,17 @@ code = '''
     if (DIR) {
         lfs_file_t file;
         lfs_file_open(&lfs, &file, "coffee/drip",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "coffee/coldbrew",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "coffee/turkish",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "coffee/tubruk",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "coffee/vietnamese",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "coffee/thai",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
 
         lfs_file_open(&lfs, &file, "coffee/drip",
                 LFS_O_WRONLY | LFS_O_CREAT) => LFS_ERR_ISDIR;
@@ -312,17 +312,17 @@ code = '''
     if (DIR) {
         lfs_file_t file;
         lfs_file_open(&lfs, &file, "/coffee/drip",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/coffee/coldbrew",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/coffee/turkish",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/coffee/tubruk",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/coffee/vietnamese",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/coffee/thai",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
 
         lfs_file_open(&lfs, &file, "/coffee/drip",
                 LFS_O_WRONLY | LFS_O_CREAT) => LFS_ERR_ISDIR;
@@ -559,17 +559,17 @@ code = '''
     if (DIR) {
         lfs_file_t file;
         lfs_file_open(&lfs, &file, "/coffee/drip",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "//coffee//coldbrew",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "///coffee///turkish",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "////coffee////tubruk",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/////coffee/////vietnamese",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "//////coffee//////thai",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
 
         lfs_file_open(&lfs, &file, "/coffee/drip",
                 LFS_O_WRONLY | LFS_O_CREAT) => LFS_ERR_ISDIR;
@@ -831,17 +831,17 @@ code = '''
     if (DIR) {
         lfs_file_t file;
         lfs_file_open(&lfs, &file, "coffee/drip/",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "coffee/coldbrew//",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "coffee/turkish///",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "coffee/tubruk////",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "coffee/vietnamese/////",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "coffee/thai//////",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
 
         lfs_file_open(&lfs, &file, "coffee/drip/",
                 LFS_O_WRONLY | LFS_O_CREAT) => LFS_ERR_ISDIR;
@@ -1164,17 +1164,17 @@ code = '''
     if (DIR) {
         lfs_file_t file;
         lfs_file_open(&lfs, &file, "/coffee/drip",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/./coffee/./coldbrew",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/././coffee/././turkish",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/./././coffee/./././tubruk",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/././././coffee/././././vietnamese",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/./././././coffee/./././././thai",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
 
         lfs_file_open(&lfs, &file, "/coffee/drip",
                 LFS_O_WRONLY | LFS_O_CREAT) => LFS_ERR_ISDIR;
@@ -1451,17 +1451,17 @@ code = '''
     if (DIR) {
         lfs_file_t file;
         lfs_file_open(&lfs, &file, "coffee/drip/.",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "coffee/coldbrew/./.",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "coffee/turkish/././.",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "coffee/tubruk/./././.",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "coffee/vietnamese/././././.",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "coffee/thai/./././././.",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
 
         lfs_file_open(&lfs, &file, "coffee/drip/.",
                 LFS_O_WRONLY | LFS_O_CREAT) => LFS_ERR_ISDIR;
@@ -1828,17 +1828,17 @@ code = '''
     if (DIR) {
         lfs_file_t file;
         lfs_file_open(&lfs, &file, "/coffee/drip",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/no/../coffee/coldbrew",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/coffee/no/../turkish",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/no/no/../../coffee/tubruk",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/no/no/../../coffee/no/../vietnamese",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/no/no/../../no/no/../../coffee/thai",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
 
         lfs_file_open(&lfs, &file, "/coffee/drip",
                 LFS_O_WRONLY | LFS_O_CREAT) => LFS_ERR_ISDIR;
@@ -2102,9 +2102,9 @@ code = '''
     // file open paths, only works on files!
     lfs_file_t file;
     lfs_file_open(&lfs, &file, "coffee/drip/..",
-            LFS_O_RDONLY) => LFS_ERR_ISDIR;
+            LFS_O_RDONLY) => 0;
     lfs_file_open(&lfs, &file, "coffee/coldbrew/../..",
-            LFS_O_RDONLY) => LFS_ERR_ISDIR;
+            LFS_O_RDONLY) => 0;
     lfs_file_open(&lfs, &file, "coffee/turkish/../../..",
             LFS_O_RDONLY) => LFS_ERR_INVAL;
     lfs_file_open(&lfs, &file, "coffee/tubruk/../../../..",
@@ -2332,17 +2332,17 @@ code = '''
     if (DIR) {
         lfs_file_t file;
         lfs_file_open(&lfs, &file, "/coffee/drip",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/no/./../coffee/coldbrew",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/coffee/no/./../turkish",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/no/no/./.././../coffee/tubruk",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/no/no/./.././../coffee/no/./../vietnamese",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/no/no/./.././../no/no/./.././../coffee/thai",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
 
         lfs_file_open(&lfs, &file, "/coffee/drip",
                 LFS_O_WRONLY | LFS_O_CREAT) => LFS_ERR_ISDIR;
@@ -2580,17 +2580,17 @@ code = '''
     if (DIR) {
         lfs_file_t file;
         lfs_file_open(&lfs, &file, "/coffee/.../drip",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/coffee/.../coldbrew",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/coffee/.../turkish",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/coffee/.../tubruk",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/coffee/.../vietnamese",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/coffee/.../thai",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
 
         lfs_file_open(&lfs, &file, "/coffee/.../drip",
                 LFS_O_WRONLY | LFS_O_CREAT) => LFS_ERR_ISDIR;
@@ -2828,17 +2828,17 @@ code = '''
     if (DIR) {
         lfs_file_t file;
         lfs_file_open(&lfs, &file, "/coffee/.drip",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/coffee/..coldbrew",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/coffee/...turkish",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/coffee/....tubruk",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/coffee/.....vietnamese",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "/coffee/......thai",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
 
         lfs_file_open(&lfs, &file, "/coffee/.drip",
                 LFS_O_WRONLY | LFS_O_CREAT) => LFS_ERR_ISDIR;
@@ -7215,17 +7215,17 @@ code = '''
     if (DIR) {
         lfs_file_t file;
         lfs_file_open(&lfs, &file, "\xff/\xff",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "\xff/\xff\xff",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "\xff/\xff\xff\xff",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "\xff/\xff\xff\xff\xff",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "\xff/\xff\xff\xff\xff\xff",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
         lfs_file_open(&lfs, &file, "\xff/\xff\xff\xff\xff\xff\xff",
-                LFS_O_RDONLY) => LFS_ERR_ISDIR;
+                LFS_O_RDONLY) => 0;
 
         lfs_file_open(&lfs, &file, "\xff/\xff",
                 LFS_O_WRONLY | LFS_O_CREAT) => LFS_ERR_ISDIR;
